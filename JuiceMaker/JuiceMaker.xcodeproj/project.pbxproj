@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F3389312B26EF54008D628F /* FruitsStoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3389302B26EF54008D628F /* FruitsStoreRepository.swift */; };
 		7F4518A12B1DB7DA002F2E9E /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4518A02B1DB7DA002F2E9E /* Fruit.swift */; };
 		C71CD66B266C7ACB0038B9CB /* FruitStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71CD66A266C7ACB0038B9CB /* FruitStore.swift */; };
 		C73DAF37255D0CDD00020D38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DAF36255D0CDD00020D38 /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F3389302B26EF54008D628F /* FruitsStoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsStoreRepository.swift; sourceTree = "<group>"; };
 		7F4518A02B1DB7DA002F2E9E /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
 		C71CD66A266C7ACB0038B9CB /* FruitStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitStore.swift; sourceTree = "<group>"; };
 		C73DAF33255D0CDD00020D38 /* JuiceMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuiceMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,10 +45,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F33892F2B26EF24008D628F /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				7F3389302B26EF54008D628F /* FruitsStoreRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		7F4518A22B1DB8B6002F2E9E /* Domain */ = {
 			isa = PBXGroup;
 			children = (
 				7F4518A32B1DB8C5002F2E9E /* Model */,
+				7F33892F2B26EF24008D628F /* Repository */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -190,6 +201,7 @@
 				7F4518A12B1DB7DA002F2E9E /* Fruit.swift in Sources */,
 				C71CD66B266C7ACB0038B9CB /* FruitStore.swift in Sources */,
 				C73DAF3B255D0CDD00020D38 /* ViewController.swift in Sources */,
+				7F3389312B26EF54008D628F /* FruitsStoreRepository.swift in Sources */,
 				C73DAF37255D0CDD00020D38 /* AppDelegate.swift in Sources */,
 				C73DAF39255D0CDD00020D38 /* SceneDelegate.swift in Sources */,
 				C73DAF4C255D0D0400020D38 /* JuiceMaker.swift in Sources */,
