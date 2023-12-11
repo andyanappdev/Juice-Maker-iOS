@@ -7,9 +7,9 @@
 
 struct Fruit {
     let type: FruitType
-    var quntity: Int
+    var quantity: Int
 }
 
-enum FruitType: String {
+enum FruitType: String, CaseIterable {
     case strawberry, banana, pineapple, kiwi, mango
 }
