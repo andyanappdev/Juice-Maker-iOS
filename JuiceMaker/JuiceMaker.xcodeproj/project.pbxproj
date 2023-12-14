@@ -107,6 +107,7 @@
 		7F3389422B26F5F5008D628F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C73DAF3C255D0CDD00020D38 /* Main.storyboard */,
 				7F3389432B26F613008D628F /* JuiceMakerScreen */,
 				7F3389492B26FCB1008D628F /* InventoryScreen */,
 			);
@@ -157,23 +158,15 @@
 			path = DI;
 			sourceTree = "<group>";
 		};
-		C71CD66D266C7B470038B9CB /* Controller */ = {
+		C71CD66D266C7B470038B9CB /* App */ = {
 			isa = PBXGroup;
 			children = (
 				C73DAF36255D0CDD00020D38 /* AppDelegate.swift */,
 				C73DAF38255D0CDD00020D38 /* SceneDelegate.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		C71CD671266C7B570038B9CB /* View */ = {
-			isa = PBXGroup;
-			children = (
-				C73DAF3C255D0CDD00020D38 /* Main.storyboard */,
 				C73DAF3F255D0CDE00020D38 /* Assets.xcassets */,
 				C73DAF41255D0CDF00020D38 /* LaunchScreen.storyboard */,
 			);
-			path = View;
+			path = App;
 			sourceTree = "<group>";
 		};
 		C73DAF2A255D0CDC00020D38 = {
@@ -195,13 +188,12 @@
 		C73DAF35255D0CDD00020D38 /* JuiceMaker */ = {
 			isa = PBXGroup;
 			children = (
+				C71CD66D266C7B470038B9CB /* App */,
 				7F3389382B26F0D2008D628F /* Core */,
 				7F7DBF6A2B27EF2E0081CBAD /* DI */,
 				7F3389342B26F00B008D628F /* Data */,
 				7F4518A22B1DB8B6002F2E9E /* Domain */,
 				7F3389422B26F5F5008D628F /* Presentation */,
-				C71CD66D266C7B470038B9CB /* Controller */,
-				C71CD671266C7B570038B9CB /* View */,
 				C73DAF44255D0CDF00020D38 /* Info.plist */,
 			);
 			path = JuiceMaker;
