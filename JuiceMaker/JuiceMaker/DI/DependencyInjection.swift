@@ -5,6 +5,8 @@
 //  Created by Doyoung An on 12/12/23.
 //
 
+import UIKit
+
 struct DependencyInjection {
     // MARK: Properties
     
@@ -21,9 +23,6 @@ struct DependencyInjection {
     // ViewModel
     private let juiceMakerViewModel: JuiceMakerViewModel
     
-    // ViewController
-    private let juiceMakerViewController: JuiceMakerViewController
-    private let inventoryViewController: InventoryViewController
     
     // Initialization
     init() {
@@ -35,25 +34,35 @@ struct DependencyInjection {
         self.juiceMakerUseCase = JuiceMakerUseCase(repository: juiceMakerRepository)
         // ViewModel
         self.juiceMakerViewModel = JuiceMakerViewModel(fruitStoreUseCase: fruitStoreUseCase, juiceMakerUseCase: juiceMakerUseCase)
-        // ViewController
-        self.juiceMakerViewController = JuiceMakerViewController(viewModel: juiceMakerViewModel)
-        self.inventoryViewController = InventoryViewController(viewModel: juiceMakerViewModel)
     }
     
     
     // MARK: Methods
-//    func injectDependencies() {
-//        
-//    }
+    func injectDependencies() -> JuiceMakerViewModel {
+        return juiceMakerViewModel
+    }
     
     func getJuiceMakerViewController() -> JuiceMakerViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: .none)
+        
+        guard let juiceMakerViewController = storyboard.instantiateViewController(withIdentifier: JuiceMakerViewController.storyboardIdentifier) as? JuiceMakerViewController else {
+            fatalError("Could not instantiate JuiceMakerViewController from storyboard.")
+        }
+        
+        juiceMakerViewController.configure(with: juiceMakerViewModel)
         return juiceMakerViewController
     }
     
     func getInventoryViewController() -> InventoryViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: .none)
+        
+        guard let inventoryViewController = storyboard.instantiateViewController(withIdentifier: InventoryViewController.storyboardIdentifier) as? InventoryViewController else {
+            fatalError("Could not instantiate InventoryViewController from storyboard.")
+        }
+        
+        inventoryViewController.configure(with: juiceMakerViewModel)
         return inventoryViewController
     }
-
 }
 
 //    let fruitRepository: FruitStoreRepository = FruitStoreRepositoryImpl(initialQuantity: 10)

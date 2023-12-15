@@ -28,6 +28,13 @@ class InventoryViewController: UIViewController {
     }
     
     
+    
+    
+    
+    func configure(with viewModel: JuiceMakerViewModel) {
+        self.viewModel = viewModel
+    }
+    
 }
 
 extension InventoryViewController: StoryboardIdentifiable { }
